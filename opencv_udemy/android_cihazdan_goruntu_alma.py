@@ -5,8 +5,6 @@ import requests
 url = "http://192.168.1.105:8080//shot.jpg"
 fileName = "/Users/mehmetalparslan/Desktop/github/openCV_goruntu_isleme/opencv_udemy/kaydedilen_videolar/tabletten_gelen_goruntu.mp4"
 
-#codec = cv2.VideoWriter_fourcc(*'mp4v')
-
 img_resp = requests.get(url)
 img_arr = np.array(bytearray(img_resp.content), dtype=np.uint8)
 img = cv2.imdecode(img_arr, cv2.IMREAD_COLOR)
