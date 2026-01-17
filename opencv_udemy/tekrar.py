@@ -27,3 +27,41 @@ while True:
 cap.release()
 videoFileOutput.release
 cv2.destroyAllWindows()
+
+
+
+
+
+
+
+"""
+
+import cv2
+
+img = cv2.imread("klon.jpg")
+
+# Önce resmin boyunu posunu alalım
+# img.shape bize (Yükseklik, Genişlik, Kanal) verir
+h, w, channels = img.shape 
+
+print(f"Resim Boyutu: {h}x{w}") # Mesela 300x400 yazar
+
+# Döngüyü kurarken sayıyı elle yazma, 'h' (yükseklik) değişkenini kullan.
+# range(h) demek: 0'dan başla, h'ye KADAR git (h dahil değil).
+# Yani h=300 ise, 0...299 yapar. Tam bizim istediğimiz!
+
+for i in range(h): # Yükseklik (Satırlar)
+    for j in range(w): # Genişlik (Sütunlar)
+        # Artık i asla 300 olmaz, en fazla 299 olur.
+        (b, g, r) = img[i, j] 
+        
+        # Buraya işlemini yaz...
+        # Mesela pikselleri kırmızı yapalım:
+        # img[i, j] = (0, 0, 255)
+
+print("İşlem tamam gardaş, kimse yere düşmedi!")
+
+
+
+
+"""
