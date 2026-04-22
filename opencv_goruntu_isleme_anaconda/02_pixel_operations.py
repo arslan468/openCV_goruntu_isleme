@@ -3,6 +3,7 @@ from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 path = "/Users/mehmetalparslan/Desktop/github/openCV_goruntu_isleme/opencv_udemy/gorseller/klon.jpg"
 
 img = cv2.imread(path)
